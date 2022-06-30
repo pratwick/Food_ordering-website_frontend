@@ -1,0 +1,253 @@
+/*css resat-- we give all the default things initially*/
+
+*{
+    margin:0;
+    padding: 0;
+}
+                                 /* html scrolling */
+html{
+    scroll-behavior: smooth;
+}                                 
+
+
+/* Css variable -- creating the variables to make easy usage*/
+:root{
+    --navbar-height:59px;
+}
+
+                                 /* STYLING NAVIGATION BAR*/
+#navbar{
+    display: flex; /*here we have made the display flex to make navbar as flex box*/
+    align-items: center; /* all the elements of the flex box will be at center vertically*/
+    position: relative; /* after inserting background to the navigation bar making the postion of the navbar as relative we
+                           get the background only up to the navigation bar*/
+}
+
+/* styling logo and img*/
+#logo{
+    margin: 3px;
+}
+
+#logo img{
+    height: 40px; /* setting height and width of the image*/
+    width: 40px;
+    margin: 6px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;  /* removing the list's bullets */
+    font-size: 1.2rem;
+}
+#navbar ul li a{   /*anchor tag is bydefault inlint and to give margin and padding to it we have to make display block*/
+display: block;
+padding: 4px 19px;
+text-decoration: none; /* here we have removed the under line of anchor tags*/
+border-radius: 20px;
+color: white;
+font-family: 'Baloo Chettan 2', cursive;
+}
+
+/*when we hove then what will happen*/
+#navbar ul li a:hover{ 
+    color: black;
+    background-color: white;
+    }
+
+
+/*now we will add the background to the navgation bar with the help of pseudo selector*/
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+                                 /* STYLING SECTION HOME */
+
+#home{
+    display: flex; /* generally as soon as we have declared the display flex all the content will come in one line */
+    flex-direction: column; /* now the elements will arranged column wise in the flex box*/
+    /*after using flex direction column align items will make the items horizontally center*/ 
+    padding:3px 200px;
+    height: 370px;
+    justify-content: center;
+    align-items: center;
+}                             
+
+/*inserting background in the home section*/
+#home::before{
+    content: "";
+    background: url('../img/salad-g497b6f48b_1920.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 440px;
+    width: 100%;
+   top: 0px;
+   left: 0px;
+    z-index: -1;
+    opacity: 0.8 ;
+}
+
+#home h1{
+    color:black;
+    text-align: center;
+   
+}
+
+#home p{
+
+    color: rgb(255 129 0);
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.btn{
+  padding: 5px 15px ;
+  border: 2px solid white;
+  background-color: brown;
+  color: white;
+  margin: 9px;
+  font-size: 1.0rem;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+                                     /* STYLING SECTION SERVICES*/
+  #service-container{
+      position: relative;
+  }
+#services{
+    margin: 0px 8px;
+    display: flex;
+}
+
+#services h2{
+    color: white;
+}
+#services p{
+    color: #ffc252;
+    text-align: center;
+    
+}
+#services .box{
+    border: 2px solid black;
+    padding :48px;
+    margin: 25px;
+    border-radius: 195px;
+    background-color: #000000bf;
+
+}
+#services .box img{  /* to have use of margin auto first we have to make display block and set height of width and then 
+                       margin auto*/
+    display: block;
+    height: 90px;
+    margin: auto;
+}
+#service-container::before{
+    content: "";
+    background: url('../img/breakfast-g6243710de_1920.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+                                       /* CLIENT SECTION */
+#client-section{
+    height: 250px;
+    position: relative;
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}      
+.client-items{
+    padding: 20px;
+}
+
+#clients img{
+    height: 60px;
+}
+#client-section::before{
+    content:"";
+    position:absolute;
+    background:url('../img/laptop-g265fea097_1920.jpg')no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+
+                                   /* CONTACT SECTION */
+
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('../img/business-g445ee2078_1920.jpg')no-repeat center center/cover;
+    height:678px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}   
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+#contact-box form{
+    width: 40%;
+
+}
+
+#contact-box label{
+    font-size: 1.0rem;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+/*utility classes*/
+
+.h-primary{
+    font-size: 2.4rem; /* rem-relative to the root element*/
+    padding: 17px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.h-secondary{
+   font-size: 1.6rem ;
+   padding: 14px;
+   font-family: 'Baloo Chettan 2', cursive;
+}
+
+.center{
+    text-align: center;
+}

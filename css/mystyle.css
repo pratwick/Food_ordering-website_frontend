@@ -1,0 +1,246 @@
+/*css reset*/
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+/*CSS variables*/
+:root{
+    --navbar-height:59px;
+}
+/*navigation bar*/
+#navbar {
+    position: relative; /*when we make the position of the navbar relative then height of the navigation will set*/
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#logo{
+    margin: 5px 9px;
+    padding: 7px 5px;
+    
+}
+
+#logo img{
+    height: 45px;
+    width: 45px;
+    margin: 3px;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 30px;
+    
+}
+
+#navbar ul{
+    display : flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.0rem;
+}
+#navbar ul li a{            
+    display:block;   /* we have made the display block so that we can set margin and padding*/ 
+    margin: 6px 18px; 
+    padding: 0px 7px;     /*here we have given margin and padding in anchor tag not in the li because when we hover then that element will only 
+                            a will get effect*/                         
+    border-radius: 10px;
+    text-decoration: none; /*underline removed*/
+    color: white;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+#navbar ul li a:hover{
+      background-color:white;
+      color:black ;
+}
+
+#navbar::before{   /*for background ie use of pseudo selector*/
+    content:" ";
+    background-color: black;
+    position : absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity: 0.6;
+}
+
+/*editing home section*/
+#home{
+    display: flex;
+    flex-direction: column; /* set the items row wise*/
+    padding: 1px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content:"";
+    background: url('../img/salad-g497b6f48b_1920.jpg') no-repeat center center /cover; /*.. because we are in css folder so to move one folder out we use..*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#home p{
+    text-align: center;
+    font-size: 17px;
+    color: brown;
+    margin: 4px;
+    padding: 3px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+#home h1{
+    color:white;
+    text-align: center;
+    margin: 15px;
+}
+#home div{
+    margin: 8px 15px;
+}
+/*services section*/
+.service-container{
+   margin: 80px 0px;
+}
+#services{
+    display: flex;
+    margin: 15px;
+}
+#services .box{
+    border: 2px solid brown;
+    margin: 2px 4px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: white;
+}
+#services .box img{
+    height: 170px;
+    display: block; /* to make margin auto ie to make the img at the center we have to make the display block , set height or width*/
+    margin: auto;             /*    and margin auto*/  
+}
+.service-container::before{
+   content: " ";
+   background: url('../img/oranges-g03ecc76d0_1920.jpg')no-repeat center center /cover;
+   position: absolute;
+   height: 422px;
+   width: 100%;
+   z-index: -1;
+   opacity: 0.8;
+
+}
+
+/* our clients*/
+#client-section{
+    height: 400px;
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients img{
+    height: 75px;
+    width: 75px;
+}
+
+.client-items{
+    margin: 5px 20px;
+    padding: 5px 20px;
+}
+.client-section::before{
+  content: "";
+  background: url('../img/breakfast-g6243710de_1920.jpg') center center no-repeat ;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+  height: 160px;
+  width: 100%; 
+}
+/*contact section*/
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: " ";
+    background: url('../img/laptop-g265fea097_1920.jpg')no-repeat center center /cover;
+    position:absolute ;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+#contact-box input,textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 0.8rem;
+  border: 1px solid black;
+}
+#contact-box form{
+    width: 35%;
+}
+#contact-box label{
+    font-size: 1.0rem;
+    
+}
+                                     /* CLIENT SECTION */
+
+#client-section{
+position: relative;
+}
+#client{
+    display: flex;
+}
+
+
+
+/*utility classes*/
+.h-primary{
+    font-size: 2.2rem;
+    padding: 20px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.hsecondary{
+    font-size: 2.0rem;
+    padding: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.para{
+    font-size: 0.8rem;
+    padding: 2px;
+    margin: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn{
+   padding: 5px;
+   margin: 3px;
+   background-color: burlywood;
+   border: 3px solid rgb(15, 8, 8);
+   border-radius: 10px;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 2px;
+  margin: 1px;   
+}
